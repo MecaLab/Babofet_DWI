@@ -36,6 +36,9 @@ This pipeline relies on several external software packages. You must have them i
     *   **SVRTK** (`svrtk.sif`): The core toolkit for slice-to-volume reconstruction (`mirtk reconstruct`, `mirtk reconstructDWI`).
 *   **Python 3**: With libraries such as `nibabel` and `numpy`.
 
+The pipeline assumes that brain masks have been generated beforehand.
+You can find the weights for our nnU-Net model [here](https://amubox.univ-amu.fr/s/rMAanGjdFEiegAs).
+
 ## Data Structure
 
 The pipeline is designed to work with data organized in a BIDS-like structure.
