@@ -23,28 +23,8 @@ Before installing the Python dependencies, ensure you have the following neuroim
 
 ## ⚙️ Installation
 
-3.  **Diffusion Modelling:** The final high-resolution 4D DWI volume is used to:
-    *   Fit a diffusion tensor model to derive metrics like Fractional Anisotropy (FA) and Mean Diffusivity (MD).
-    *   Estimate Fiber Orientation Distributions (FODs) using Constrained Spherical Deconvolution (CSD) to resolve complex fiber crossings.
+**1. Clone the repository**
 
-## Prerequisites & Dependencies
-
-This pipeline relies on several external software packages. You must have them installed and available in your system's `PATH`.
-
-*   **FSL** (v6.0 or later): For `flirt`, `eddy`, `topup`, `fnirt`, and other utilities.
-*   **MRtrix3**: For denoising, Gibbs correction, tensor and FOD modeling (`dwidenoise`, `mrdegibbs`, `dwi2tensor`, `dwi2fod`, etc.).
-*   **ANTs**: For N4 bias field correction and mask propagation (`N4BiasFieldCorrection`, `antsApplyTransforms`).
-*   **Singularity / Apptainer**: Required to run containerized versions of MIRTK and SVRTK.
-    *   **MIRTK** (`mirtk.sif`): Used for converting transformation formats.
-    *   **SVRTK** (`svrtk.sif`): The core toolkit for slice-to-volume reconstruction (`mirtk reconstruct`, `mirtk reconstructDWI`).
-*   **Python 3**: With libraries such as `nibabel` and `numpy`.
-
-The pipeline assumes that brain masks have been generated beforehand.
-You can find the weights for our nnU-Net model [here](https://amubox.univ-amu.fr/s/rMAanGjdFEiegAs).
-
-## Data Structure
-
-The pipeline is designed to work with data organized in a BIDS-like structure.
 ```
 git clone https://github.com/MecaLab/Babofet_DWI.git
 cd Babofet_DWI
