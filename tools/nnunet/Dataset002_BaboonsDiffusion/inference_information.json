@@ -1,0 +1,41 @@
+{
+    "all_results": {
+        "ensemble___nnUNetTrainer_100epochs__nnUNetPlans__2d___nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres___0_1_2_3_4": 0.9586073960145457,
+        "nnUNetTrainer_100epochs__nnUNetPlans__2d": 0.9477490624113084,
+        "nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres": 0.9587201676390518
+    },
+    "best_model_or_ensemble": {
+        "postprocessing_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/crossval_results_folds_0_1_2_3_4/postprocessing.pkl",
+        "result_on_crossval_post_pp": 0.9587270900499382,
+        "result_on_crossval_pre_pp": 0.9587201676390518,
+        "selected_model_or_models": [
+            {
+                "configuration": "3d_fullres",
+                "plans_identifier": "nnUNetPlans",
+                "trainer": "nnUNetTrainer_100epochs"
+            }
+        ],
+        "some_plans_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/crossval_results_folds_0_1_2_3_4/plans.json"
+    },
+    "considered_models": [
+        {
+            "configuration": "2d",
+            "plans": "nnUNetPlans",
+            "trainer": "nnUNetTrainer_100epochs"
+        },
+        {
+            "configuration": "3d_fullres",
+            "plans": "nnUNetPlans",
+            "trainer": "nnUNetTrainer_100epochs"
+        }
+    ],
+    "dataset_name_or_id": "Dataset002_BaboonsDiffusion",
+    "ensembling_allowed": true,
+    "folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ]
+}

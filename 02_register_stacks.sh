@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e -u -o pipefail
+source config/config.sh
+
 
 # ==============================================================================
 # STEP 3: REGISTER STACKS TO REFERENCE
@@ -15,56 +17,53 @@ set -e -u -o pipefail
 #
 # ==============================================================================
 
-# --- Configuration ---
-PREPROC_DIR="${DERIVATIVES_DIR}/02_preprocessed_stacks"
-REG_DIR="${DERIVATIVES_DIR}/03_registration"
-
-MANUAL_MASKS_ROOT="/envau/work/meca/data/babofetDiffusion/BIDS/derivatives/manual_masks"
-MANUAL_MASK_DIR="${MANUAL_MASKS_ROOT}/sub-${SUBJECT_ID}/${SESSION_ID}/"
-
-mkdir -p "${REG_DIR}"
+detected_stacks=( $(ls "${OUTPUT_DIR}"/${SUBJECT_ID}_${SESSION_ID}_*run-*_final_b1000.nii.gz 2>/dev/null | sort) )
 
 # select the reference stack
-REFERENCE_STACK=$(python3 scripts/select_reference_stack.py "$MANUAL_MASK_DIR")
+MASK_DIR="${DERIVATIVES_DIR}/svrtk/${SUBJECT_ID}/${SESSION_ID}/dwi"
+
+REFERENCE_STACK=$(python3 scripts/select_reference_stack.py \
+    --subject "$SUBJECT_ID" \
+    --session "$SESSION_ID" \
+    --output-dir "$OUTPUT_DIR" \
+    --mask-dir "$MASK_DIR" \
+    --use-mask)
+
+REF_STACK_FILE="${OUTPUT_DIR}/reference_stack.txt"
 
 echo "Reference stack is: $REFERENCE_STACK"
 echo "$REFERENCE_STACK" > "$REF_STACK_FILE"
 
 # The reference image to which all others will be aligned
-REFERENCE_IMG_MASKED="${PREPROC_DIR}/${REFERENCE_STACK}/final_b1000_masked.nii.gz"
-REFERENCE_IMG_UNMASKED="${PREPROC_DIR}/${REFERENCE_STACK}/final_b1000.nii.gz"
+REFERENCE_IMG_MASKED="$OUTPUT_DIR/${REFERENCE_STACK}_final_b1000_masked.nii.gz"
+REFERENCE_IMG_UNMASKED="$OUTPUT_DIR/${REFERENCE_STACK}_final_b1000.nii.gz"
 
 echo "Registering all stacks to reference: ${REFERENCE_STACK}"
 
 # --- Loop over all preprocessed acquisitions ---
-for acq_dir in "${PREPROC_DIR}"/*/; do
-    ACQ_ID=$(basename "${acq_dir}")
-
-    echo "Processing registration for: ${ACQ_ID}"
+for file_path in "${detected_stacks[@]}"; do
+    filename=$(basename "$file_path" .nii.gz)          # e.g., sub-01_ses-01_dir-AP_run-01_final_b1000
+    basename=${filename%_final_b1000}                  # e.g., sub-01_ses-01_dir-AP_run-01
+    
+    echo "Processing registration for: ${basename}"
 
     # --- Path Definitions ---
     # These paths are defined for every acquisition, including the reference
-    MOVING_IMG_MASKED="${PREPROC_DIR}/${ACQ_ID}/final_b1000_masked.nii.gz"
-    MOVING_IMG_UNMASKED="${PREPROC_DIR}/${ACQ_ID}/final_b1000.nii.gz"
+    MOVING_IMG_MASKED="$OUTPUT_DIR/${basename}_final_b1000_masked.nii.gz"
+    MOVING_IMG_UNMASKED="$OUTPUT_DIR/${basename}_final_b1000.nii.gz"
 
-    OUTPUT_PREFIX="${REG_DIR}/${ACQ_ID}_to_${REFERENCE_STACK}"
+    OUTPUT_PREFIX="$OUTPUT_DIR/${basename}_to_${REFERENCE_STACK}"
     OUTPUT_MAT="${OUTPUT_PREFIX}.mat"
     OUTPUT_DOF="${OUTPUT_PREFIX}.dof"
 
     # --- Step 1: Create Transformation Matrix ---
     # If the current stack is the reference, create an identity matrix.
     # Otherwise, run FLIRT to compute the registration.
-    if [[ "$ACQ_ID" == "$REFERENCE_STACK" ]]; then
+    if [[ "$basename" == "$REFERENCE_STACK" ]]; then
         echo "  -> This is the reference stack. Creating identity transform"
-        # Create identity .mat file manually (4x4 identity matrix in FLIRT format)
-        cat > "${OUTPUT_MAT}" << 'EOF'
-1 0 0 0
-0 1 0 0
-0 0 1 0
-0 0 0 1
-EOF
+        cp tools/identity.mat "${OUTPUT_MAT}"
     else
-        echo "  -> Registering ${ACQ_ID} to ${REFERENCE_STACK} with FLIRT..."
+        echo "  -> Registering ${basename} to ${REFERENCE_STACK} with FLIRT..."
         # Rigid Registration with FLIRT
         flirt -in "${MOVING_IMG_MASKED}" \
               -ref "${REFERENCE_IMG_MASKED}" \
@@ -75,15 +74,14 @@ EOF
     fi
 
     # --- Step 2: Convert FLIRT .mat to MIRTK .dof ---
-    # This step is now performed for all acquisitions, including the reference.
     echo "  -> Converting FLIRT matrix to MIRTK DOF"
-    singularity run --pwd /shared --bind "${DERIVATIVES_DIR}":/shared \
-        "${MIRTK_SIF_PATH}" \
-        convert-dof "/shared/$(realpath --relative-to="${DERIVATIVES_DIR}" "${OUTPUT_MAT}")" \
-                    "/shared/$(realpath --relative-to="${DERIVATIVES_DIR}" "${OUTPUT_DOF}")" \
+    singularity run --pwd /shared --bind "${OUTPUT_DIR}":/shared \
+        "${mirtk_path}" \
+        convert-dof "/shared/$(realpath --relative-to="${OUTPUT_DIR}" "${OUTPUT_MAT}")" \
+                    "/shared/$(realpath --relative-to="${OUTPUT_DIR}" "${OUTPUT_DOF}")" \
         -input-format flirt -output-format mirtk_affine \
-        -source "/shared/$(realpath --relative-to="${DERIVATIVES_DIR}" "${MOVING_IMG_MASKED}")" \
-        -target "/shared/$(realpath --relative-to="${DERIVATIVES_DIR}" "${REFERENCE_IMG_MASKED}")"
+        -source "/shared/$(realpath --relative-to="${OUTPUT_DIR}" "${MOVING_IMG_MASKED}")" \
+        -target "/shared/$(realpath --relative-to="${OUTPUT_DIR}" "${REFERENCE_IMG_MASKED}")"
 done
 
 echo "All registrations complete."

@@ -1,0 +1,458 @@
+{
+    "foreground_mean": {
+        "Dice": 0.9645216667458807,
+        "FN": 768.7407407407408,
+        "FP": 554.8518518518518,
+        "IoU": 0.9317312138334025,
+        "TN": 272998.74074074073,
+        "TP": 19300.185185185186,
+        "n_pred": 19855.037037037036,
+        "n_ref": 20068.925925925927
+    },
+    "mean": {
+        "1": {
+            "Dice": 0.9645216667458807,
+            "FN": 768.7407407407408,
+            "FP": 554.8518518518518,
+            "IoU": 0.9317312138334025,
+            "TN": 272998.74074074073,
+            "TP": 19300.185185185186,
+            "n_pred": 19855.037037037036,
+            "n_ref": 20068.925925925927
+        }
+    },
+    "metric_per_case": [
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9342046470062556,
+                    "FN": 50,
+                    "FP": 1128,
+                    "IoU": 0.8765328581909653,
+                    "TN": 241339,
+                    "TP": 8363,
+                    "n_pred": 9491,
+                    "n_ref": 8413
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-02_acq-ax_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-02_acq-ax_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9520115260999668,
+                    "FN": 95,
+                    "FP": 771,
+                    "IoU": 0.9084179357021996,
+                    "TN": 241424,
+                    "TP": 8590,
+                    "n_pred": 9361,
+                    "n_ref": 8685
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-02_acq-cor_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-02_acq-cor_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9550568149697553,
+                    "FN": 703,
+                    "FP": 92,
+                    "IoU": 0.9139796580826661,
+                    "TN": 241638,
+                    "TP": 8447,
+                    "n_pred": 8539,
+                    "n_ref": 9150
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-02_acq-sag_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-02_acq-sag_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9340667621128778,
+                    "FN": 1373,
+                    "FP": 377,
+                    "IoU": 0.8762901173476602,
+                    "TN": 236734,
+                    "TP": 12396,
+                    "n_pred": 12773,
+                    "n_ref": 13769
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-03_acq-ax_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-03_acq-ax_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.956875898418783,
+                    "FN": 1022,
+                    "FP": 58,
+                    "IoU": 0.9173174092788241,
+                    "TN": 237818,
+                    "TP": 11982,
+                    "n_pred": 12040,
+                    "n_ref": 13004
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-03_acq-cor_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-03_acq-cor_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9551396187084726,
+                    "FN": 870,
+                    "FP": 163,
+                    "IoU": 0.9141313383208645,
+                    "TN": 238850,
+                    "TP": 10997,
+                    "n_pred": 11160,
+                    "n_ref": 11867
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-03_acq-sag_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-03_acq-sag_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9636951501154735,
+                    "FN": 858,
+                    "FP": 321,
+                    "IoU": 0.9299340345872704,
+                    "TN": 234053,
+                    "TP": 15648,
+                    "n_pred": 15969,
+                    "n_ref": 16506
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-04_acq-ax_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-04_acq-ax_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9708253731826572,
+                    "FN": 795,
+                    "FP": 106,
+                    "IoU": 0.9433048074502894,
+                    "TN": 285164,
+                    "TP": 14991,
+                    "n_pred": 15097,
+                    "n_ref": 15786
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-04_acq-cor_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-04_acq-cor_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9448688692661309,
+                    "FN": 1647,
+                    "FP": 20,
+                    "IoU": 0.8954989969909729,
+                    "TN": 234928,
+                    "TP": 14285,
+                    "n_pred": 14305,
+                    "n_ref": 15932
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-04_acq-sag_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-04_acq-sag_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9695519212870629,
+                    "FN": 795,
+                    "FP": 350,
+                    "IoU": 0.9409032258064516,
+                    "TN": 231505,
+                    "TP": 18230,
+                    "n_pred": 18580,
+                    "n_ref": 19025
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-05_acq-ax_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-05_acq-ax_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9790475142982842,
+                    "FN": 555,
+                    "FP": 207,
+                    "IoU": 0.9589550228925398,
+                    "TN": 257403,
+                    "TP": 17803,
+                    "n_pred": 18010,
+                    "n_ref": 18358
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-05_acq-cor_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-05_acq-cor_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9766510646356971,
+                    "FN": 397,
+                    "FP": 466,
+                    "IoU": 0.9543675972927242,
+                    "TN": 231968,
+                    "TP": 18049,
+                    "n_pred": 18515,
+                    "n_ref": 18446
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-05_acq-sag_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-05_acq-sag_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9677837476219346,
+                    "FN": 1175,
+                    "FP": 366,
+                    "IoU": 0.9375784826021792,
+                    "TN": 226193,
+                    "TP": 23146,
+                    "n_pred": 23512,
+                    "n_ref": 24321
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-07_acq-ax_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-07_acq-ax_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9804673457159976,
+                    "FN": 387,
+                    "FP": 428,
+                    "IoU": 0.961683121767748,
+                    "TN": 267242,
+                    "TP": 20455,
+                    "n_pred": 20883,
+                    "n_ref": 20842
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-07_acq-cor_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-07_acq-cor_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9693606872551167,
+                    "FN": 921,
+                    "FP": 338,
+                    "IoU": 0.940543093270366,
+                    "TN": 267337,
+                    "TP": 19916,
+                    "n_pred": 20254,
+                    "n_ref": 20837
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-07_acq-sag_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-07_acq-sag_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9634255129348795,
+                    "FN": 667,
+                    "FP": 1219,
+                    "IoU": 0.9294320137693631,
+                    "TN": 224154,
+                    "TP": 24840,
+                    "n_pred": 26059,
+                    "n_ref": 25507
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-08_acq-ax_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-08_acq-ax_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9737555822916454,
+                    "FN": 998,
+                    "FP": 289,
+                    "IoU": 0.9488534753407781,
+                    "TN": 326069,
+                    "TP": 23876,
+                    "n_pred": 24165,
+                    "n_ref": 24874
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-08_acq-cor_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-08_acq-cor_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9671727533853098,
+                    "FN": 1219,
+                    "FP": 381,
+                    "IoU": 0.9364322606277314,
+                    "TN": 275886,
+                    "TP": 23570,
+                    "n_pred": 23951,
+                    "n_ref": 24789
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-08_acq-sag_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-08_acq-sag_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9643628934030097,
+                    "FN": 678,
+                    "FP": 1136,
+                    "IoU": 0.9311783898626603,
+                    "TN": 224522,
+                    "TP": 24544,
+                    "n_pred": 25680,
+                    "n_ref": 25222
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-09_acq-ax_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-09_acq-ax_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9665726027916138,
+                    "FN": 950,
+                    "FP": 815,
+                    "IoU": 0.9353077007660447,
+                    "TN": 323949,
+                    "TP": 25518,
+                    "n_pred": 26333,
+                    "n_ref": 26468
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-09_acq-ax_run-2_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-09_acq-ax_run-2_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9751829126868661,
+                    "FN": 825,
+                    "FP": 352,
+                    "IoU": 0.9515677721998189,
+                    "TN": 326930,
+                    "TP": 23125,
+                    "n_pred": 23477,
+                    "n_ref": 23950
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-09_acq-cor_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-09_acq-cor_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.970834897984729,
+                    "FN": 1024,
+                    "FP": 374,
+                    "IoU": 0.9433227925079056,
+                    "TN": 326566,
+                    "TP": 23268,
+                    "n_pred": 23642,
+                    "n_ref": 24292
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-09_acq-cor_run-2_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-09_acq-cor_run-2_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9721336837592499,
+                    "FN": 811,
+                    "FP": 684,
+                    "IoU": 0.9457783258378065,
+                    "TN": 348748,
+                    "TP": 26077,
+                    "n_pred": 26761,
+                    "n_ref": 26888
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-09_acq-sag_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-09_acq-sag_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9745994686418162,
+                    "FN": 527,
+                    "FP": 735,
+                    "IoU": 0.9504573469948573,
+                    "TN": 350847,
+                    "TP": 24211,
+                    "n_pred": 24946,
+                    "n_ref": 24738
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-09_acq-sag_run-2_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-09_acq-sag_run-2_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9596472194029328,
+                    "FN": 508,
+                    "FP": 1798,
+                    "IoU": 0.9224248132947588,
+                    "TN": 221154,
+                    "TP": 27420,
+                    "n_pred": 29218,
+                    "n_ref": 27928
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-10_acq-ax_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-10_acq-ax_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9715066887999219,
+                    "FN": 357,
+                    "FP": 1102,
+                    "IoU": 0.9445921312471518,
+                    "TN": 425252,
+                    "TP": 24873,
+                    "n_pred": 25975,
+                    "n_ref": 25230
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-10_acq-cor_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-10_acq-cor_run-1_dwi.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9732838453623401,
+                    "FN": 549,
+                    "FP": 905,
+                    "IoU": 0.9479580514692724,
+                    "TN": 323293,
+                    "TP": 26485,
+                    "n_pred": 27390,
+                    "n_ref": 27034
+                }
+            },
+            "prediction_file": "/scratch/mcazzolla/nnunet/nnUNet_results/Dataset002_BaboonsDiffusion/nnUNetTrainer_100epochs__nnUNetPlans__3d_fullres/fold_3/validation/sub-Fabienne_ses-10_acq-sag_run-1_dwi.nii.gz",
+            "reference_file": "/scratch/mcazzolla/nnunet/nnUNet_preprocessed/Dataset002_BaboonsDiffusion/gt_segmentations/sub-Fabienne_ses-10_acq-sag_run-1_dwi.nii.gz"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "channel_names": {
+        "0": "b0"
+    },
+    "labels": {
+        "background": 0,
+        "brain": 1
+    },
+    "numTraining": 359,
+    "file_ending": ".nii.gz"
+}
