@@ -47,6 +47,7 @@ flirt -in "${RECON_B0_IMG}" \
       -out "${OUTPUT_DIR}/${SESSION_BASENAME}_b0_SVR_to_T2_registered.nii.gz" \
       -omat "${SVR_TO_T2_MAT}" \
       -searchrx -180 180 -searchry -180 180 -searchrz -180 180 \
+      -bins 32 \
       -cost mutualinfo \
       -dof 6
 

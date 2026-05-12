@@ -81,6 +81,7 @@ flirt \
 fslmaths "${OUTPUT_DIR}/${SESSION_BASENAME}_T2_in_DWI.nii.gz" -thr 20 -bin "${OUTPUT_DIR}/${SESSION_BASENAME}_T2_mask.nii.gz"
 
 
+
 # --- Step 3: Concatenate Registered b0 and Reconstructed DWI ---
 echo "STEP 7.3: Concatenating b0 and DWI volumes..."
 mrcat "${OUTPUT_DIR}/${SESSION_BASENAME}_b0_SVR_registered_to_DWI.nii.gz" "${RECON_DWI}" "${CONCAT_DWI}" -nthreads 64 -force

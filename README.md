@@ -32,7 +32,7 @@ cd Babofet_DWI
 
 **2. Download Singularity Images and Models**
 
-The pipeline requires pre-compiled MIRTK/SVRTK Singularity .sif images and pre-trained nnU-Net model weights. Run the provided script to download them:
+The pipeline requires pre-compiled MIRTK/SVRTK Singularity ```.sif``` images and pre-trained nnU-Net model weights. Run the provided script to download them:
 
 ```
 bash scripts/download_dependencies.sh
@@ -40,7 +40,7 @@ bash scripts/download_dependencies.sh
 
 **3. Set up the Python Environment**
 
-All required Python packages are listed in requirements.txt
+All required Python packages are listed in ```requirements.txt```
 
 ```
 conda create -n babofet_env python=3.12
@@ -72,7 +72,7 @@ export OUTPUT_TMP_DIR="/path/to/working/scratch"  # intermediary files
 ```
 **3. HPC Cluster Users (SLURM)**
 
-If you use a module system on an HPC cluster, create a file named config/env_setup.sh and add your module load commands there. The pipeline will automatically load them:
+If you use a module system on an HPC cluster, create a file named ```config/env_setup.sh``` and add your module load commands there. The pipeline will automatically load them:
 ```
 # config/env_setup.sh
 module purge
@@ -81,6 +81,8 @@ module load mrtrix/3.0.8
 module load singularity
 module load FSL/0.6.0.7.18
 ```
+otherwise delete the ```config/env_setup.sh``` file.
+
 ## 🏃 Usage
 ### Running Locally
 
@@ -96,5 +98,8 @@ bash 00_run_pipeline.sh sub-Aziza ses-01
 
 An example SLURM submission script is provided (sbatch_run.sh). You can edit the arrays inside the script to define your subjects/sessions, and submit it:
 ```
-sbatch sbatch_run.sh
+sbatch sbatch_run.sh <SUBJECT_ID> <SESSION_ID>
+
+# Example:
+sbatch sbatch_run.sh sub-Aziza ses-01
 ```

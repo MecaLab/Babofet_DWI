@@ -33,6 +33,8 @@ for file_path in "${detected_stacks[@]}"; do
         -o "$BRAIN_MASK" \
         --device "cpu"
 
+    # cp $BRAIN_MASK "${DERIVATIVES_DIR}/svrtk/${SUBJECT_ID}/${SESSION_ID}/dwi/${basename}_desc-brain_mask.nii.gz"
+
     DILATED_BRAIN_MASK="$OUTPUT_DIR/${basename}_brain_mask_eddycorr_dilated.nii.gz"
     DILATED2_BRAIN_MASK="$OUTPUT_DIR/${basename}_brain_mask_eddycorr_dilated2.nii.gz"
     fslmaths "${BRAIN_MASK}" -kernel 3D -dilM "${DILATED_BRAIN_MASK}"

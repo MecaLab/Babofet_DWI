@@ -9,9 +9,9 @@ mkdir -p sif_images
 mkdir -p tools/nnunet
 
 # URLs (REPLACE THESE WITH YOUR ACTUAL HOSTED URLs)
-MIRTK_URL="https://amubox.univ-amu.fr/public.php/dav/files/X8BE6Y4b2xngaKD/?accept=zip"
-SVRTK_URL="https://amubox.univ-amu.fr/public.php/dav/files/Fce9zjkqBQXTaik/?accept=zip"
-NNUNET_MODEL_URL="https://amubox.univ-amu.fr/public.php/dav/files/LBQ9d2LakiPqC5w/?accept=zip"
+MIRTK_URL="https://amubox.univ-amu.fr/public.php/dav/files/dTLN3TYeMD4XYDY/?accept=zip"
+SVRTK_URL="https://amubox.univ-amu.fr/public.php/dav/files/kbETdz3yzi6qJmn/?accept=zip"
+NNUNET_MODEL_URL="https://amubox.univ-amu.fr/public.php/dav/files/zPnc9kaQQR7mMsa/?accept=zip"
 
 # Function to check and download
 download_if_missing() {

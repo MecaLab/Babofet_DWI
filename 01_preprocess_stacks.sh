@@ -84,24 +84,16 @@ for file_path in "${detected_stacks[@]}"; do
         mrmath - mean -axis 3 "$OUTPUT_DIR/${basename}_b1000_denoised.nii.gz" -force
 
 
-    # if brain mask exists, use it, otherwise create one with nnunet
+    # exrtact brain mask with nnunet
+
+    eval "$ACTIVATE_ENV"
     BRAIN_MASK="${DERIVATIVES_DIR}/svrtk/${SUBJECT_ID}/${SESSION_ID}/dwi/${basename}_desc-brain_mask.nii.gz"
 
-    if [[ -f "$BRAIN_MASK" ]]; then
-        echo "Using existing brain mask: $BRAIN_MASK"
-    else
-        echo "No brain mask found for ${basename}. Generating with nnU-Net..."
-
-        eval "$ACTIVATE_ENV"
-
-        python3 scripts/nnunet_brainmask.py \
-            -i "$OUTPUT_DIR/${basename}_b0_denoised.nii.gz" \
-            -o "$BRAIN_MASK" \
-            --device "cpu"
-            
-        eval "$ACTIVATE_ENV"
-    fi
-
+    python3 scripts/nnunet_brainmask.py \
+        -i "$OUTPUT_DIR/${basename}_b0_denoised.nii.gz" \
+        -o "$BRAIN_MASK" \
+        --device "cpu"
+    
 
     # --- DILATE BRAIN MASK ---
     DILATED_BRAIN_MASK="$OUTPUT_DIR/${basename}_dilated_brain_mask.nii.gz"
