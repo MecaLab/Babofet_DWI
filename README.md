@@ -103,3 +103,33 @@ sbatch sbatch_run.sh <SUBJECT_ID> <SESSION_ID>
 # Example:
 sbatch sbatch_run.sh sub-Aziza ses-01
 ```
+### Run specific steps
+
+To run specific steps of the pipeline is necessary to comment out the steps to skip in the ```./00_run_pipeline.sh``` file:
+
+```bash
+# Example: skip the preprocessing
+
+#echo "STEP 1: Preprocessing individual DWI stacks..."
+#bash ./01_preprocess_stacks.sh
+#echo "✅ STEP 1 complete."
+#echo "-----------------------------------------"
+
+#echo "STEP 1a: Extracting brain mask..."
+#bash ./01a_brain_extraction.sh
+#echo "✅ STEP 1a complete."
+#echo "-----------------------------------------"
+
+echo "STEP 2: Registering stacks to reference..."
+bash ./02_register_stacks.sh
+echo "✅ STEP 2 complete."
+echo "-----------------------------------------"
+
+echo "STEP 3a: Reconstructing high-resolution b0 volume..."
+bash ./03a_reconstruct_b0.sh
+echo "✅ STEP 3a complete."
+echo "-----------------------------------------"
+
+...
+
+```

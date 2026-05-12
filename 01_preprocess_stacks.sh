@@ -362,7 +362,7 @@ for file_path in "${detected_stacks[@]}"; do
         -g "$EDDY_ROTATED_BVECS" \
         -j "$RAW_JSON"
 
-    # extract b0
+    # extract avg b0 and b1000
     dwiextract "$OUTPUT_DIR/${basename}_dwi_final.mif" -bzero - | mrmath - mean -axis 3 "$OUTPUT_DIR/${basename}_final_b0.nii.gz" -force
     dwiextract "$OUTPUT_DIR/${basename}_dwi_final.mif" -no_bzero - | mrmath - mean -axis 3 "$OUTPUT_DIR/${basename}_final_b1000.nii.gz" -force 
 

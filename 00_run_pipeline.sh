@@ -64,30 +64,30 @@ echo "Session: ${SESSION_ID}"
 echo "Number of stacks: ${stack_count}"
 echo "-----------------------------------------"
 
-#echo "STEP 1: Preprocessing individual DWI stacks..."
-#bash ./01_preprocess_stacks.sh
-#echo "✅ STEP 1 complete."
-#echo "-----------------------------------------"
+echo "STEP 1: Preprocessing individual DWI stacks..."
+bash ./01_preprocess_stacks.sh
+echo "✅ STEP 1 complete."
+echo "-----------------------------------------"
 
-#echo "STEP 1a: Extracting brain mask..."
-#bash ./01a_brain_extraction.sh
-#echo "✅ STEP 1a complete."
-#echo "-----------------------------------------"
+echo "STEP 1a: Extracting brain mask..."
+bash ./01a_brain_extraction.sh
+echo "✅ STEP 1a complete."
+echo "-----------------------------------------"
 
-#echo "STEP 2: Registering stacks to reference..."
-#bash ./02_register_stacks.sh
-#echo "✅ STEP 2 complete."
-#echo "-----------------------------------------"
+echo "STEP 2: Registering stacks to reference..."
+bash ./02_register_stacks.sh
+echo "✅ STEP 2 complete."
+echo "-----------------------------------------"
 
-#echo "STEP 3a: Reconstructing high-resolution b0 volume..."
-#bash ./03a_reconstruct_b0.sh
-#echo "✅ STEP 3a complete."
-#echo "-----------------------------------------"
+echo "STEP 3a: Reconstructing high-resolution b0 volume..."
+bash ./03a_reconstruct_b0.sh
+echo "✅ STEP 3a complete."
+echo "-----------------------------------------"
 
-#echo "STEP 3b: Reconstructing high-resolution b1000 volume..."
-#bash ./03b_reconstruct_b1000.sh
-#echo "✅ STEP 3b complete."
-#echo "-----------------------------------------"
+echo "STEP 3b: Reconstructing high-resolution b1000 volume..."
+bash ./03b_reconstruct_b1000.sh
+echo "✅ STEP 3b complete."
+echo "-----------------------------------------"
 
 echo "STEP 4: Aligning reconstructed volumes to T2 template..."
 bash ./04_align_to_t2.sh
